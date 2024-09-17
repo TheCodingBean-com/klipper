@@ -1,0 +1,29 @@
+<h1>Create New Coupon</h1>
+
+<%= form_with model: [:admin, @coupon], local: true do |form| %>
+  <div class="form-group">
+    <%= form.label :title %>
+    <%= form.text_field :title, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :description %>
+    <%= form.text_area :description, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :code %>
+    <%= form.text_field :code, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :expires_at %>
+    <%= form.datetime_select :expires_at, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.submit "Create Coupon", class: "btn btn-primary" %>
+  </div>
+<% end %>
+
+<%= link_to 'Back', admin_coupons_path, class: "btn btn-secondary" %>

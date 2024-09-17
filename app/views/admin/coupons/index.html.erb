@@ -1,0 +1,31 @@
+<h1>Coupons</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Code</th>
+      <th>Expires At</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @coupons.each do |coupon| %>
+      <tr>
+        <td><%= coupon.title %></td>
+        <td><%= coupon.description %></td>
+        <td><%= coupon.code %></td>
+        <td><%= coupon.expires_at %></td>
+        <td>
+          <%= link_to 'Add to Wallet', download_pass_admin_coupon_path(coupon), class: "btn btn-success" %>
+          <%= link_to 'Edit', edit_admin_coupon_path(coupon), class: "btn btn-warning" %>
+          <%= link_to 'Delete', admin_coupon_path(coupon), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New Coupon', new_admin_coupon_path, class: "btn btn-primary" %>
