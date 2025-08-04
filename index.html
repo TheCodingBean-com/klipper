@@ -1,70 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Klip-It | PocketPerks</title>
+    <title>Digi-Klip | Smarter Savings</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
       .coupon {
         border: 2px dashed #ccc;
         padding: 1rem;
         background-color: white;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        font-size: 0.8rem;
+        font-size: 0.85rem;
+        border-radius: 0.5rem;
         text-align: center;
+      }
+
+      .phone {
+        width: 280px;
+        height: 560px;
+        border-radius: 40px;
+        border: 10px solid #000000; /* Tailwind's gray-300 */
+        background-color: #fff;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        position: relative;
+      }
+
+      .screen {
+        padding: 1rem;
       }
     </style>
   </head>
-  <body class="bg-gray-100 text-gray-800">
+  <body class="bg-gray-100 text-gray-800 font-sans">
     <!-- Navbar -->
-    <nav class="bg-white shadow-md p-4 flex justify-between items-center">
-      <div class="text-xl font-bold text-blue-600">Klip-It</div>
+    <nav class="bg-white shadow-md p-4 flex justify-between items-center fixed top-0 w-full z-50">
+      <div class="text-xl font-bold text-blue-600">Digi-Klip</div>
       <div class="space-x-4 text-sm text-gray-600">
-        <a href="#" class="hover:text-blue-500">About</a>
+        <a href="#" class="hover:text-blue-500">How it Works</a>
         <a href="#" class="hover:text-blue-500">Features</a>
         <a href="#" class="hover:text-blue-500">Contact</a>
       </div>
     </nav>
 
     <!-- Hero -->
-    <section class="relative bg-gray-100 min-h-screen flex flex-col justify-center items-center px-6 py-20 text-center overflow-hidden">
-      <!-- Coupon Grid Background -->
-      <div class="absolute inset-0 z-0 grid grid-cols-5 md:grid-cols-7 gap-2 p-6 opacity-10">
-        <div class="coupon">$5 Off Pizza</div>
-        <div class="coupon">Buy 1 Get 1 Coffee</div>
-        <div class="coupon">30% Off Spa Day</div>
-        <div class="coupon">Free Smoothie</div>
-        <div class="coupon">$10 Off Tires</div>
-        <div class="coupon">2-for-1 Sushi</div>
-        <div class="coupon">Buy 1 Get 1 Bagels</div>
-        <div class="coupon">Half Off Gym Pass</div>
-        <div class="coupon">Free Haircut w/ Color</div>
-        <div class="coupon">$20 Off Shoes</div>
-        <div class="coupon">Buy 2 Get 1 Donuts</div>
-        <div class="coupon">Free Cream Sample</div>
-        <div class="coupon">20% Off Electronics</div>
-        <div class="coupon">$3 Off Gas</div>
-        <div class="coupon">Lunch Combo $6</div>
-      </div>
+    <section class="relative pt-32 pb-20 px-4 flex justify-center items-center text-center bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1556742400-b5e8e4b233c3?auto=format&fit=crop&w=1350&q=80');">
+      <div class="absolute inset-0 bg-white bg-opacity-10 z-0"></div>
 
-      <!-- Foreground Hero -->
-      <div class="z-10 bg-white bg-opacity-95 rounded-xl p-10 shadow-lg max-w-xl w-full">
-        <!-- Hero Image -->
-        <img src="https://images.unsplash.com/photo-1607082349566-187342a86b57?auto=format&fit=crop&w=800&q=80" alt="PocketPerks Hero" class="w-full rounded-lg shadow mb-6">
-
-        <h1 class="text-3xl md:text-4xl font-bold mb-4">PocketPerks by Klip-It</h1>
-        <p class="mb-6 text-gray-700 text-lg">A smarter, simpler way to save with local coupons. Scan, store, and get alerted before deals expire.</p>
-
-        <div class="flex justify-center space-x-4 mb-6">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Available_on_the_App_Store_(black)_SVG.svg" alt="App Store" class="h-10" />
-          <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" class="h-10" />
+      <!-- Hero content -->
+      <div class="relative z-10 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <!-- Phone mockup with sample coupon -->
+        <div class="flex justify-center">
+          <div class="phone">
+            <div class="screen flex flex-col items-center justify-center h-full bg-gray-50">
+              <div class="coupon w-full">
+                <h2 class="font-bold text-lg mb-1">15% OFF</h2>
+                <p>Any Purchase Over $25</p>
+                <p class="mt-2 text-sm text-gray-500">Expires: 09/30/2025</p>
+              </div>
+              <button class="mt-6 bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 text-sm">Klip-It</button>
+            </div>
+          </div>
         </div>
 
-        <form class="flex flex-col sm:flex-row justify-center gap-2">
-          <input type="email" placeholder="Enter your email" class="px-4 py-2 border rounded-md w-full sm:w-auto" />
-          <button class="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700">Join Waitlist</button>
-        </form>
+        <!-- Tagline and waitlist section -->
+        <div class="text-left">
+          <h1 class="text-4xl sm:text-5xl font-bold mb-4">Clipping Smarter,</h1>
+          <h1 class="text-4xl sm:text-5xl font-bold mb-4">For Better Savings.</h1>
+          <p class="text-lg text-gray-700 mb-6">Scan it. Store it. Never miss a deal again. Digi-Klip helps you clip and use real coupons—instantly and intuitively at your favorite stores.</p>
+
+          <div class="flex space-x-4 mb-6">
+            <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-pre-order-on-the-app-store.svg" alt="App Store" class="h-10" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" class="h-10" />
+          </div>
+
+          <form class="flex flex-col sm:flex-row gap-2 w-full max-w-md">
+            <input type="email" placeholder="Enter your email" class="px-4 py-2 border rounded w-full sm:w-auto" />
+            <button class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700">Join Waitlist</button>
+          </form>
+        </div>
       </div>
     </section>
   </body>
