@@ -1,88 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="PocketPerks by Kliperr — The smarter, faster way to save with local digital coupons." />
-    <title>PocketPerks – Built by ZERO</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-      body {
-        font-family: 'Inter', sans-serif;
-        background: #f4f4f5;
-        color: #111;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        padding: 2rem;
-        text-align: center;
-      }
-      h1 {
-        font-size: 2.5rem;
-        font-weight: 700;
-        margin-bottom: 1rem;
-        color: #1e1e1e;
-      }
-      p {
-        font-size: 1.2rem;
-        color: #555;
-        max-width: 600px;
-        margin-bottom: 2rem;
-      }
-      input[type="email"] {
-        padding: 0.75rem 1rem;
-        font-size: 1rem;
-        border: 1px solid #ccc;
-        border-radius: 6px;
-        width: 250px;
-        max-width: 80%;
-      }
-      button {
-        padding: 0.75rem 1.5rem;
-        font-size: 1rem;
-        background-color: #111827;
-        color: white;
-        border: none;
-        border-radius: 6px;
-        margin-left: 0.5rem;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-      }
-      button:hover {
-        background-color: #000;
-      }
-      .tagline {
-        background: #e2e8f0;
-        color: #1e293b;
-        font-weight: 600;
-        padding: 0.4rem 1rem;
-        border-radius: 9999px;
-        margin-bottom: 1rem;
-        font-size: 0.85rem;
-        text-transform: uppercase;
-      }
-      .footer {
-        margin-top: 4rem;
-        font-size: 0.9rem;
-        color: #888;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="tagline">Built by ZERO • From the ground up</div>
-    <h1>PocketPerks is launching soon</h1>
-    <p>A smarter, simpler way to save with digital coupons. Scan, store, and unlock nearby deals — no expired paper junk, no hassle.</p>
-    <form>
-      <input type="email" placeholder="Enter your email" required />
-      <button type="submit">Notify Me</button>
-    </form>
-    <div class="footer">© 2025 Kliperr, a ZERO venture.</div>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Klip-It App | Save Smarter</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f9fafb;
+      color: #111827;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+    .logo {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #3b82f6;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.75rem;
+    }
+    p {
+      font-size: 1.125rem;
+      color: #4b5563;
+      margin-bottom: 1.5rem;
+      max-width: 600px;
+    }
+    .coupon-preview {
+      background: #fff;
+      padding: 1rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 0 15px rgba(0,0,0,0.08);
+      margin-bottom: 2rem;
+      max-width: 400px;
+    }
+    .coupon-preview img {
+      width: 100%;
+      border-radius: 0.5rem;
+    }
+    .store-badges {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+    .store-badges img {
+      height: 50px;
+    }
+    .email-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    input[type="email"] {
+      padding: 0.75rem 1rem;
+      border-radius: 0.5rem;
+      border: 1px solid #d1d5db;
+      font-size: 1rem;
+      width: 100%;
+      max-width: 300px;
+    }
+    button {
+      background: #3b82f6;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    footer {
+      margin-top: 2rem;
+      font-size: 0.875rem;
+      color: #9ca3af;
+    }
+  </style>
+</head>
+<body>
+  <div class="logo">Klip-It</div>
+  <h1>Smarter Local Savings Start Here</h1>
+  <p>
+    Discover exclusive local coupons in your area. Scan, store, and get notified before deals expire — all in one sleek app.
+  </p>
+  
+  <div class="coupon-preview">
+    <img src="https://source.unsplash.com/400x250/?coupon,shopping" alt="Sample Coupon" />
+    <p style="margin-top: 0.75rem; font-weight: 600;">15% Off Your Next Coffee at Brew Bros</p>
+    <p style="font-size: 0.9rem; color: #6b7280;">Expires: Aug 31, 2025</p>
+  </div>
+
+  <div class="store-badges">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Available_on_the_App_Store_%28black%29_SVG.svg" alt="App Store" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" />
+  </div>
+
+  <form class="email-form">
+    <input type="email" placeholder="Enter your email" required />
+    <button type="submit">Join Waitlist</button>
+  </form>
+
+  <footer>
+    &copy; 2025 Klip-It. Built by ZERO.
+  </footer>
+</body>
 </html>
