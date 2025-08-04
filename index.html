@@ -7,17 +7,19 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
       .coupon {
-        border: 2px dashed #ccc;
+        border: 2px dashed #d1d5db;
         padding: 1rem;
         background-color: white;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
         font-size: 0.9rem;
+        border-radius: 0.5rem;
+        text-align: center;
       }
     </style>
   </head>
-  <body class="bg-gray-100 text-gray-800">
+  <body class="bg-gray-50 text-gray-800">
     <!-- Navbar -->
-    <nav class="bg-white shadow-md p-4 flex justify-between items-center">
+    <nav class="bg-white shadow-md p-4 flex justify-between items-center fixed top-0 w-full z-50">
       <div class="text-xl font-bold text-blue-600">Klip-It</div>
       <div class="space-x-4 text-sm text-gray-600">
         <a href="#" class="hover:text-blue-500">About</a>
@@ -27,31 +29,38 @@
     </nav>
 
     <!-- Hero -->
-    <section class="relative bg-gray-100 min-h-screen flex flex-col justify-center items-center px-6 py-20 text-center">
+    <section class="relative min-h-screen flex flex-col justify-center items-center px-6 py-32 text-center overflow-hidden">
       <!-- Coupon Grid Background -->
-      <div class="absolute inset-0 z-0 grid grid-cols-4 gap-4 opacity-10 p-6">
+      <div class="absolute inset-0 z-0 grid grid-cols-6 sm:grid-cols-8 lg:grid-cols-10 gap-4 p-4 opacity-10">
         <div class="coupon">50% Off Tacos</div>
-        <div class="coupon">Buy 1 Get 1 Free Coffee</div>
-        <div class="coupon">Free Haircut w/ Service</div>
+        <div class="coupon">Free Coffee</div>
+        <div class="coupon">$5 Off Pizza</div>
+        <div class="coupon">BOGO Ice Cream</div>
+        <div class="coupon">20% Off Gym</div>
+        <div class="coupon">2-for-1 Sushi</div>
+        <div class="coupon">10% Off Tires</div>
+        <div class="coupon">$10 Haircut</div>
+        <div class="coupon">Free Smoothie</div>
+        <div class="coupon">15% Off Shoes</div>
+        <div class="coupon">Buy 1 Get 1 Bagels</div>
+        <div class="coupon">30% Off Spa Day</div>
         <div class="coupon">10% Off Groceries</div>
-        <div class="coupon">$5 Off Gas</div>
-        <div class="coupon">25% Off Spa Day</div>
-        <div class="coupon">2-for-1 Burgers</div>
-        <div class="coupon">BOGO Sandwiches</div>
+        <div class="coupon">25% Off Skincare</div>
+        <div class="coupon">BOGO Pizza</div>
       </div>
 
       <!-- Foreground Hero -->
-      <div class="z-10 bg-white bg-opacity-90 rounded-xl p-10 shadow-lg max-w-xl">
-        <h1 class="text-3xl md:text-4xl font-bold mb-4">PocketPerks by Klip-It</h1>
-        <p class="mb-6 text-gray-700 text-lg">A smarter, simpler way to save with local coupons. Scan, store, and get alerted to deals near you.</p>
+      <div class="z-10 bg-white bg-opacity-95 rounded-xl p-10 shadow-xl max-w-2xl w-full">
+        <h1 class="text-4xl font-bold mb-4">PocketPerks by Klip-It</h1>
+        <p class="mb-6 text-gray-600 text-lg">A smarter, simpler way to save with local coupons. Scan, store, and get alerted before deals expire.</p>
 
         <div class="flex justify-center space-x-4 mb-6">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Available_on_the_App_Store_(black)_SVG.svg" alt="App Store" class="h-10" />
-          <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" class="h-10" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Available_on_the_App_Store_(black)_SVG.svg" alt="App Store" class="h-12" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" class="h-12" />
         </div>
 
-        <form class="flex flex-col sm:flex-row justify-center gap-2">
-          <input type="email" placeholder="Enter your email" class="px-4 py-2 border rounded-md w-full sm:w-auto" />
+        <form class="flex flex-col sm:flex-row justify-center items-center gap-2">
+          <input type="email" placeholder="Enter your email" class="px-4 py-2 border rounded-md w-full sm:w-80" />
           <button class="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700">Join Waitlist</button>
         </form>
       </div>
